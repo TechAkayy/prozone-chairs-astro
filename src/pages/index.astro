@@ -1,0 +1,31 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import TheHeader from '@/components/TheHeader.vue'
+import HeroSection from '@/components/HeroSection.vue'
+import FeatureSection from '@/components/FeatureSection.vue'
+import DesignSection from '@/components/DesignSection.vue'
+import ShowNow from '@/components/ShowNow.vue'
+import SubscribeToDeals from '@/components/SubscribeToDeals.vue'
+import BookAnAppointment from '@/components/BookAnAppointment.vue'
+import FooterSection from '@/components/FooterSection.vue'
+---
+
+<Layout title="Home">
+  <div>
+    <TheHeader />
+    <main>
+      <HeroSection />
+      <FeatureSection />
+      <DesignSection />
+      <ShowNow />
+      <section class="bg-secondary-100 py-12 text-gray-800" data-pg-collapsed>
+        <div class="container mx-auto px-4 relative">
+          <SubscribeToDeals client:visible />
+          <BookAnAppointment client:visible />
+        </div>
+      </section>
+    </main>
+    <FooterSection />
+  </div></Layout>
+
+<style></style>
